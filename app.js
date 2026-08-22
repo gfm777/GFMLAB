@@ -494,7 +494,7 @@
         if (!grid) return;
 
         grid.innerHTML = DAW_DATA.map(daw => {
-            const imgUrl = `https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=${encodeURIComponent(daw.imagePrompt)}&image_size=landscape_16_9`;
+            const imgUrl = `images/daw/${daw.id}.jpg`;
             return `
                 <div class="daw-card glass" style="--daw-color: ${daw.color};">
                     <div class="daw-image" style="background: linear-gradient(135deg, ${daw.color}22, transparent);">
@@ -528,7 +528,7 @@
         if (!grid) return;
 
         grid.innerHTML = ENGINEERS_DATA.map(eng => {
-            const imgUrl = `https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=${encodeURIComponent(eng.imagePrompt)}&image_size=portrait_4_3`;
+            const imgUrl = `images/engineers/${eng.id}.jpg`;
             return `
                 <div class="engineer-card glass">
                     <div class="engineer-image">
