@@ -1069,7 +1069,7 @@ const ENGINEERS_DATA = [
         specialty: 'R&B / 流行 / 电子',
         era: '1990s - 至今',
         location: '洛杉矶, 美国',
-        desc: '以前卫的声音设计和创新的混音手法闻名，推动了 2000 年代 R&B 和流行音乐的声响革命。Disney's Mulan 录音师出身，后成为顶级混音师。',
+        desc: '以前卫的声音设计和创新的混音手法闻名，推动了 2000 年代 R&B 和流行音乐的声响革命。迪士尼 Mulan 录音师出身，后成为顶级混音师。',
         works: [
             'Beyoncé - Crazy in Love',
             'Jason Mraz - I\'m Yours',
