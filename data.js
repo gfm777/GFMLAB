@@ -792,3 +792,329 @@ const HISTORY_TIMELINE = [
         tags: ['AI 母带', '自动分轨', '生成式音频']
     }
 ];
+
+/* ============================================
+   DAW 数字音乐工作站数据
+   ============================================ */
+
+const DAW_DATA = [
+    {
+        id: 'ableton-live',
+        name: 'Ableton Live',
+        icon: '🎛️',
+        color: '#ff6b35',
+        developer: 'Ableton (德国)',
+        platform: 'macOS / Windows',
+        price: '€99 - €749',
+        website: 'https://www.ableton.com',
+        desc: '以 Session View 闻名，实时即兴创作和现场表演的王者，电子音乐人的首选 DAW。',
+        features: [
+            'Session View：非线性触发音频/MIDI 片段，适合即兴编曲和现场演出',
+            'Arrangement View：传统时间线编排视图，满足精细编曲需求',
+            '内置设备强大：Wavetable、Operator、Echo 等高质量合成器和效果器',
+            'Max for Live：内置可视化编程环境，可自定义乐器和效果',
+            'Push 硬件控制器深度集成'
+        ],
+        bestFor: '电子音乐 / 现场表演 / Loop 制作',
+        imagePrompt: 'professional music production software interface with session view clip grid launcher, orange accent color, dark theme, audio tracks and MIDI blocks, modern digital audio workstation'
+    },
+    {
+        id: 'logic-pro',
+        name: 'Logic Pro',
+        icon: '🎹',
+        color: '#c0c0c0',
+        developer: 'Apple (美国)',
+        platform: 'macOS / iPad',
+        price: '¥1,998 (买断)',
+        website: 'https://www.apple.com/logic-pro/',
+        desc: 'Apple 生态下的全能型 DAW，内置乐器和效果器质量极高，性价比出色。',
+        features: [
+            '内置 70+ 效果器插件和 3,800+ 循环素材，开箱即用',
+            'Sampler / Quick Sampler / Alchemy 合成器：内置乐器质量媲美第三方',
+            'Smart Tempo：自动检测和适配节奏，无需打点',
+            'iPad 版本支持：移动端与桌面端无缝衔接',
+            'Mastering Assistant：内置 AI 母带助手'
+        ],
+        bestFor: '流行 / 摇滚 / 编曲 / 苹果用户',
+        imagePrompt: 'professional music production software interface with arrange window and track mixer, silver gray accent color, dark theme, timeline arrangement view, modern digital audio workstation'
+    },
+    {
+        id: 'pro-tools',
+        name: 'Pro Tools',
+        icon: '🎙️',
+        color: '#3b82f6',
+        developer: 'Avid (美国)',
+        platform: 'macOS / Windows',
+        price: '$34.99/月 起',
+        website: 'https://www.avid.com/pro-tools',
+        desc: '录音棚行业标准 DAW，影视后期和大型录音工程的业界标杆。',
+        features: [
+            '录音棚行业标准：全球专业录音棚的默认选择',
+            'Audio Elastic Audio：强大的音频时间拉伸和音高修正',
+            '与 Avid 控制台深度集成：S6、S4、MTRX 硬件无缝连接',
+            'Cloud Collaboration：云端协作功能，远程多人同时制作',
+            'Dolby Atmos 沉浸式音频原生支持'
+        ],
+        bestFor: '录音棚 / 影视后期 / 大型工程',
+        imagePrompt: 'professional music production software interface with waveform editing view and mixing console, blue accent color, dark theme, multi track audio editing, modern digital audio workstation'
+    },
+    {
+        id: 'fl-studio',
+        name: 'FL Studio',
+        icon: '🥁',
+        color: '#10f5a0',
+        developer: 'Image-Line (比利时)',
+        platform: 'macOS / Windows / Android / iOS',
+        price: '€99 - €299 (终身免费升级)',
+        website: 'https://www.image-line.com',
+        desc: '以步进音序器闻名的 Beat 制作神器，Hip-Hop 和电子音乐制作人的最爱。',
+        features: [
+            'Step Sequencer：经典的 16 步节拍制作方式，直观高效',
+            'Channel Rack + Pattern 系统：独特的模式化编曲思维',
+            'Piano Roll：被公认为最强的 MIDI 编辑器之一',
+            '终身免费升级：一次购买，所有未来版本免费更新',
+            '内置合成器丰富：Sytrus、Harmor、FLEX 等强力音源',
+            '移动端版本支持手机端制作'
+        ],
+        bestFor: 'Hip-Hop / Beat 制作 / 电子音乐',
+        imagePrompt: 'professional music production software interface with step sequencer pattern view and channel rack, green accent color, dark theme, beat making workflow, modern digital audio workstation'
+    },
+    {
+        id: 'cubase',
+        name: 'Cubase Pro',
+        icon: '🎼',
+        color: '#8b5cf6',
+        developer: 'Steinberg (德国)',
+        platform: 'macOS / Windows',
+        price: '€571 (买断)',
+        website: 'https://www.steinberg.net/cubase/',
+        desc: 'MIDI 编曲之王，VST 插件标准的创始者，影视配乐和编曲的首选。',
+        features: [
+            'VST 标准创始者：定义了全球音频插件标准',
+            'Expression Maps：最强交响乐 MIDI 表情控制',
+            'Score Editor：专业五线谱编辑，可直接出谱',
+            'Channel Strip：内置 SSL 级别的通道条处理链',
+            'Control Room：专业监听管理和混音 B 管理系统',
+            'AudioWarp：强大的音频时间/音高修正'
+        ],
+        bestFor: '影视配乐 / 交响乐编曲 / MIDI 制作',
+        imagePrompt: 'professional music production software interface with project window arrangement and mixer console, purple accent color, dark theme, MIDI orchestral arrangement, modern digital audio workstation'
+    },
+    {
+        id: 'studio-one',
+        name: 'Studio One',
+        icon: '🎚️',
+        color: '#ef4444',
+        developer: 'PreSonus (美国)',
+        platform: 'macOS / Windows',
+        price: '$99 - $399',
+        website: 'https://www.presonus.com/studio-one',
+        desc: '以 "拖拽即工作" 闻名的现代 DAW，从编曲到母带一站式完成。',
+        features: [
+            'Drag-and-drop 工作流：几乎所有操作都可以拖拽完成',
+            'Arranger Track：灵活的歌曲结构重组功能',
+            'Mix Engine FX：模拟混音台的处理效果',
+            'Project Page：内置母带处理页面，编曲到母带一站完成',
+            'Harmony Generator：内置和声生成',
+            '与 PreSonus 硬件深度集成'
+        ],
+        bestFor: '全流程制作 / 母带处理 / 高效编曲',
+        imagePrompt: 'professional music production software interface with arrange view and drag drop workflow, red accent color, dark theme, multi track mixing, modern digital audio workstation'
+    },
+    {
+        id: 'reaper',
+        name: 'REAPER',
+        icon: '⚙️',
+        color: '#00f5ff',
+        developer: 'Cockos (美国)',
+        platform: 'macOS / Windows / Linux',
+        price: '$60 (个人) / $400 (商业)',
+        website: 'https://www.reaper.fm',
+        desc: '轻量高效的极致 DAW，可深度自定义，被众多专业混音师采用。',
+        features: [
+            '极致轻量：安装包仅 ~15MB，运行速度极快',
+            '深度可定制：界面、快捷键、工具栏完全可自定义',
+            '脚本支持：可通过 Lua/Python 编写自定义脚本',
+            '64-bit 浮点内部处理：引擎精度极高',
+            '无限轨道：没有任何轨道数量限制',
+            '跨平台：Windows / macOS / Linux 全平台支持',
+            '评估期无功能限制，到期后仍可使用'
+        ],
+        bestFor: '专业混音 / 高效工作 / 极客用户',
+        imagePrompt: 'professional music production software interface with track view and routing matrix, cyan accent color, dark theme, audio mixing console, modern digital audio workstation'
+    },
+    {
+        id: 'bitwig',
+        name: 'Bitwig Studio',
+        icon: '🔌',
+        color: '#ec4899',
+        developer: 'Bitwig (德国)',
+        platform: 'macOS / Windows / Linux',
+        price: '€299 (买断) / €169/年 (升级)',
+        website: 'https://www.bitwig.com',
+        desc: '模块化设计先锋，The Grid 环境让声音设计拥有无限可能。',
+        features: [
+            'The Grid：内置完全模块化的合成器/效果器设计环境',
+            'Clip Launcher：类似 Ableton 的 Session View，支持场景启动',
+            'MPE 支持：原生支持多维复音表达，配合现代 MIDI 控制器',
+            'Open Controller API：任何硬件控制器可自定义映射',
+            'Hybrid Tracks：一条轨可同时包含音频和 MIDI',
+            'Linux 原生支持：少数支持 Linux 的专业 DAW'
+        ],
+        bestFor: '声音设计 / 模块化制作 / 实验音乐',
+        imagePrompt: 'professional music production software interface with clip launcher and modular device chain, pink accent color, dark theme, sound design environment, modern digital audio workstation'
+    }
+];
+
+/* ============================================
+   著名混音师数据
+   ============================================ */
+
+const ENGINEERS_DATA = [
+    {
+        id: 'chris-lord-alge',
+        name: 'Chris Lord-Alge',
+        nameCn: '克里斯·洛德-阿尔杰',
+        specialty: '摇滚 / 流行',
+        era: '1980s - 至今',
+        location: '洛杉矶, 美国',
+        desc: '被誉为"混音界的传奇"，以 SSL 4000G 调音台和 1176 压缩器的标志性声音闻名。混音生涯超过 30 年，参与过的唱片总销量超过 1.5 亿张。',
+        works: [
+            'Green Day - American Idiot',
+            'Foo Fighters - Everlong',
+            'Muse - Uprising',
+            'Bruce Springsteen - The Rising',
+            'My Chemical Romance - Welcome to the Black Parade'
+        ],
+        signature: 'SSL 4000G 总线压缩 + 1176 蓝条纹 + 多总线并行压缩',
+        imagePrompt: 'professional audio mixing engineer working at SSL mixing console in recording studio, dark moody lighting with cyan neon accents, behind the glass studio control room, legendary mix engineer silhouette'
+    },
+    {
+        id: 'andrew-scheps',
+        name: 'Andrew Scheps',
+        nameCn: '安德鲁·谢普斯',
+        specialty: '摇滚 / 金属 / 流行',
+        era: '1990s - 至今',
+        location: '洛杉矶, 美国',
+        desc: '全模拟到混合混音的先驱。以大规模模拟调音台混音起家，后来转向全 ITB（In The Box）混音，证明了插件混音也能达到顶级水准。',
+        works: [
+            'Red Hot Chili Peppers - Stadium Arcadium',
+            'Metallica - Death Magnetic',
+            'Adele - 21 (部分曲目)',
+            'Linkin Park - A Thousand Suns',
+            'Jay-Z - The Black Album (部分曲目)'
+        ],
+        signature: '大规模总线编组 + 并行压缩 + 精细自动化',
+        imagePrompt: 'professional audio mixing engineer in hybrid studio with analog gear and pro tools, dark ambient lighting with purple neon accents, mixing console and monitors, experienced mix engineer at work'
+    },
+    {
+        id: 'serban-ghenea',
+        name: 'Serban Ghenea',
+        nameCn: '塞尔班·吉尼亚',
+        specialty: '流行 / Hip-Hop / R&B',
+        era: '2000s - 至今',
+        location: '弗吉尼亚, 美国',
+        desc: '当代流行音乐混音之王，凭借 Pro Tools 全数字化混音混出了无数 Billboard #1。至今已获得 19 座格莱美奖，是 21 世纪最有影响力的混音师。',
+        works: [
+            'The Weeknd - Blinding Lights',
+            'Taylor Swift - 1989 / Reputation / Midnights',
+            'Bruno Mars - 24K Magic',
+            'Dua Lipa - Future Nostalgia',
+            'Harry Styles - Fine Line',
+            'Drake - God\'s Plan'
+        ],
+        signature: 'Pro Tools 全数字化混音 + 精准低频管理 + 极致清晰度',
+        imagePrompt: 'professional pop music mixing engineer at pro tools workstation, clean modern studio with blue LED lighting, dual large monitors, hit making producer environment, contemporary mixing studio'
+    },
+    {
+        id: 'manny-marroquin',
+        name: 'Manny Marroquin',
+        nameCn: '曼尼·马罗金',
+        specialty: 'Hip-Hop / R&B / 流行',
+        era: '2000s - 至今',
+        location: '洛杉矶, 美国',
+        desc: 'Larrabee Studios 的首席混音师，以温暖厚实的人声和鼓组声音闻名。从危地马拉移民到美国，从录音助理做到格莱美获奖混音师的传奇经历。',
+        works: [
+            'Kanye West - My Beautiful Dark Twisted Fantasy',
+            'Kendrick Lamar - DAMN.',
+            'Rihanna - Diamonds / Work',
+            'Post Malone - Hollywood\'s Bleeding',
+            'SZA - Ctrl'
+        ],
+        signature: '人声处理的魔法 + 低频管理 + 总线胶水压缩',
+        imagePrompt: 'professional hip hop mixing engineer at large format console in Larrabee studios, warm orange lighting with magenta accents, hip hop music production control room, latin american mix engineer'
+    },
+    {
+        id: 'dave-pensado',
+        name: 'Dave Pensado',
+        nameCn: '戴夫·彭萨多',
+        specialty: 'R&B / 流行 / Hip-Hop',
+        era: '1980s - 至今',
+        location: '洛杉矶, 美国',
+        desc: '混音大师兼教育家，通过 Pensado\'s Place 访谈节目培养了整整一代混音师。人声混音的教科书级人物，影响了无数当代混音师的职业路径。',
+        works: [
+            'Beyoncé - Dangerously in Love',
+            'Michael Jackson - Invincible',
+            'Mary J. Blige - No More Drama',
+            'Justin Timberlake - Justified',
+            'Elton John - Songs from the West Coast'
+        ],
+        signature: '精细人声处理 + 多级压缩链 + 宽频段 EQ 雕刻',
+        imagePrompt: 'professional veteran mixing engineer at Labyrinth console, warm amber studio lighting, vintage and modern gear combination, respected elder mix engineer mentor figure, studio control room'
+    },
+    {
+        id: 'tony-maserati',
+        name: 'Tony Maserati',
+        nameCn: '托尼·马塞拉蒂',
+        specialty: 'R&B / 流行 / 电子',
+        era: '1990s - 至今',
+        location: '洛杉矶, 美国',
+        desc: '以前卫的声音设计和创新的混音手法闻名，推动了 2000 年代 R&B 和流行音乐的声响革命。Disney's Mulan 录音师出身，后成为顶级混音师。',
+        works: [
+            'Beyoncé - Crazy in Love',
+            'Jason Mraz - I\'m Yours',
+            'Lady Gaga - The Fame',
+            'Ricky Martin - Livin\' la Vida Loca',
+            'Alicia Keys - No One'
+        ],
+        signature: '创新效果器使用 + 宽广立体声场 + 前卫声音设计',
+        imagePrompt: 'professional R&B pop mixing engineer at modern console with outboard gear, teal and purple studio lighting, creative sound design workspace, contemporary music production studio'
+    },
+    {
+        id: 'tom-elmhirst',
+        name: 'Tom Elmhirst',
+        nameCn: '汤姆·埃尔姆赫斯特',
+        specialty: '流行 / 爵士 / 电子',
+        era: '2000s - 至今',
+        location: '纽约 / 伦敦',
+        desc: '在纽约 Electric Lady Studios 工作，以复古模拟味道与现代数字精度的完美融合闻名。Adele 的御用混音师，同时也是 Amy Winehouse 经典专辑的混音者。',
+        works: [
+            'Adele - 25 / 30 (全部曲目)',
+            'Amy Winehouse - Back to Black',
+            'David Bowie - Blackstar',
+            'Frank Ocean - Blonde',
+            'Mark Ronson - Uptown Funk'
+        ],
+        signature: '模拟温暖 + 数字精度 + 极致动态保留',
+        imagePrompt: 'professional mixing engineer at Electric Lady Studios New York, vintage console with modern plugins, warm golden studio lighting, classic rock and pop mixing environment, legendary studio control room'
+    },
+    {
+        id: 'jaycen-joshua',
+        name: 'Jaycen Joshua',
+        nameCn: '杰森·约书亚',
+        specialty: 'Hip-Hop / R&B / 流行',
+        era: '2010s - 至今',
+        location: '洛杉矶, 美国',
+        desc: '新一代混音师的领军人物，以极具冲击力的低频和清晰通透的中高频定义了 2010 年代后期至今的 Hip-Hop 和 R&B 声音标准。',
+        works: [
+            'Travis Scott - Astroworld',
+            'SZA - SOS',
+            'The Weeknd - After Hours',
+            'Rihanna - Anti',
+            'Kendrick Lamar - Mr. Morale & The Big Steppers',
+            'Future - Future & HNDRXX'
+        ],
+        signature: '极致低频冲击力 + Pultec EQ 风格 + CLA 系列插件',
+        imagePrompt: 'professional modern hip hop mixing engineer at boutique studio setup, dark studio with green and cyan neon lighting, pro tools with analog outboard gear, next generation mix engineer, cutting edge sound'
+    }
+];

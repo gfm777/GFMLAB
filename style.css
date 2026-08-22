@@ -1937,3 +1937,322 @@ nav, section, footer, .modal-overlay {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================
+   DAW 卡片样式
+   ============================================ */
+
+.daw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.daw-card {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 245, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+}
+
+.daw-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.15), 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.daw-image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.daw-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+.daw-card:hover .daw-image img {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.daw-icon {
+    position: absolute;
+    font-size: 48px;
+    z-index: 2;
+    text-shadow: 0 0 20px currentColor;
+}
+
+.daw-body {
+    padding: 24px;
+}
+
+.daw-name {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 0 0 12px currentColor;
+}
+
+.daw-desc {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.daw-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.daw-meta-item {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+
+.daw-meta-item strong {
+    color: var(--text-secondary);
+    margin-right: 4px;
+}
+
+.daw-features {
+    margin-bottom: 20px;
+}
+
+.daw-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.daw-bullet {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #05070e !important;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.daw-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.daw-best {
+    font-size: 12px;
+    padding: 4px 12px;
+    border: 1px solid;
+    border-radius: 20px;
+    font-family: var(--font-mono);
+    font-weight: 500;
+}
+
+.daw-link {
+    font-size: 13px;
+    padding: 6px 16px;
+    border: 1px solid;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.daw-link:hover {
+    background: currentColor;
+    color: #05070e !important;
+}
+
+/* ============================================
+   混音师卡片样式
+   ============================================ */
+
+.engineer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.engineer-card {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 0, 234, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+}
+
+.engineer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(255, 0, 234, 0.15), 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.engineer-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.engineer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.engineer-card:hover .engineer-image img {
+    transform: scale(1.05);
+}
+
+.engineer-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(5, 7, 14, 0.9) 100%);
+    pointer-events: none;
+}
+
+.engineer-body {
+    padding: 24px;
+}
+
+.engineer-name {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.engineer-name-cn {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.engineer-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.engineer-tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(0, 245, 255, 0.08);
+    color: var(--cyan);
+    font-family: var(--font-mono);
+    border: 1px solid rgba(0, 245, 255, 0.15);
+}
+
+.engineer-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.engineer-section {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.engineer-section strong {
+    display: block;
+    font-size: 12px;
+    color: var(--magenta);
+    font-family: var(--font-mono);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.engineer-works {
+    list-style: none;
+    padding: 0;
+}
+
+.engineer-works li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding: 4px 0;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.engineer-works li::before {
+    content: '♪';
+    position: absolute;
+    left: 0;
+    color: var(--cyan);
+    font-size: 12px;
+}
+
+.engineer-sig {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.engineer-sig strong {
+    font-size: 12px;
+    color: var(--purple);
+    font-family: var(--font-mono);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.engineer-sig span {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .daw-grid {
+        grid-template-columns: 1fr;
+    }
+    .engineer-grid {
+        grid-template-columns: 1fr;
+    }
+    .daw-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

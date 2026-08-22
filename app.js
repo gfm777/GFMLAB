@@ -93,7 +93,7 @@
         const navToggle = document.getElementById('navToggle');
         const navLinks = document.querySelector('.nav-links');
         const anchors = document.querySelectorAll('.nav-link');
-        const sections = ['hero', 'terminology', 'mechanics', 'history'];
+        const sections = ['hero', 'terminology', 'mechanics', 'history', 'daw', 'engineers'];
 
         window.addEventListener('scroll', () => {
             navbar.classList.toggle('scrolled', window.scrollY > 30);
@@ -488,6 +488,78 @@
         `).join('');
     }
 
+    /* ========== DAW 卡片渲染 ========== */
+    function renderDawCards() {
+        const grid = document.getElementById('dawGrid');
+        if (!grid) return;
+
+        grid.innerHTML = DAW_DATA.map(daw => {
+            const imgUrl = `https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=${encodeURIComponent(daw.imagePrompt)}&image_size=landscape_16_9`;
+            return `
+                <div class="daw-card glass" style="--daw-color: ${daw.color};">
+                    <div class="daw-image" style="background: linear-gradient(135deg, ${daw.color}22, transparent);">
+                        <img src="${imgUrl}" alt="${daw.name} interface" loading="lazy" onerror="this.style.display='none'">
+                        <div class="daw-icon" style="color: ${daw.color};">${daw.icon}</div>
+                    </div>
+                    <div class="daw-body">
+                        <h3 class="daw-name" style="color: ${daw.color};">${daw.name}</h3>
+                        <p class="daw-desc">${daw.desc}</p>
+                        <div class="daw-meta">
+                            <span class="daw-meta-item"><strong>开发商</strong> ${daw.developer}</span>
+                            <span class="daw-meta-item"><strong>平台</strong> ${daw.platform}</span>
+                            <span class="daw-meta-item"><strong>价格</strong> ${daw.price}</span>
+                        </div>
+                        <div class="daw-features">
+                            ${daw.features.map(f => `<div class="daw-feature"><span class="daw-bullet" style="background: ${daw.color};">▸</span> ${f}</div>`).join('')}
+                        </div>
+                        <div class="daw-footer">
+                            <span class="daw-best" style="border-color: ${daw.color}; color: ${daw.color};">${daw.bestFor}</span>
+                            <a href="${daw.website}" target="_blank" rel="noopener" class="daw-link" style="border-color: ${daw.color}; color: ${daw.color};">官网 ↗</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    /* ========== 混音师卡片渲染 ========== */
+    function renderEngineerCards() {
+        const grid = document.getElementById('engineerGrid');
+        if (!grid) return;
+
+        grid.innerHTML = ENGINEERS_DATA.map(eng => {
+            const imgUrl = `https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=${encodeURIComponent(eng.imagePrompt)}&image_size=portrait_4_3`;
+            return `
+                <div class="engineer-card glass">
+                    <div class="engineer-image">
+                        <img src="${imgUrl}" alt="${eng.name}" loading="lazy" onerror="this.style.display='none'">
+                        <div class="engineer-overlay"></div>
+                    </div>
+                    <div class="engineer-body">
+                        <h3 class="engineer-name">${eng.name}</h3>
+                        <span class="engineer-name-cn">${eng.nameCn}</span>
+                        <div class="engineer-tags">
+                            <span class="engineer-tag">${eng.specialty}</span>
+                            <span class="engineer-tag">${eng.era}</span>
+                            <span class="engineer-tag">${eng.location}</span>
+                        </div>
+                        <p class="engineer-desc">${eng.desc}</p>
+                        <div class="engineer-section">
+                            <strong>代表性作品</strong>
+                            <ul class="engineer-works">
+                                ${eng.works.map(w => `<li>${w}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="engineer-sig">
+                            <strong>标志性手法</strong>
+                            <span>${eng.signature}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
     /* ========== 启动 ========== */
     document.addEventListener('DOMContentLoaded', () => {
         initParticles();
@@ -501,5 +573,7 @@
         renderTabs();
         renderTabContent();
         renderTimeline();
+        renderDawCards();
+        renderEngineerCards();
     });
 })();
