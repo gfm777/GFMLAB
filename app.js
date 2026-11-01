@@ -613,7 +613,7 @@
     }
 
     // 效果器参数计算器
-    function calcFxParams() {
+    window.calcFxParams = function() {
         const input = document.getElementById('bpmInput');
         const result = document.getElementById('calcResult');
         const bpm = parseFloat(input.value);
