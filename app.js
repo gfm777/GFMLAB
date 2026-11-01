@@ -641,44 +641,4 @@
         };
     }
 
-    // 通用详情弹窗
-    function openInfoModal(title, html) {
-        document.getElementById('modalContent').innerHTML =
-            `<h2 class="detail-title">${title}</h2><div class="detail-body">${html}</div>`;
-        document.getElementById('modalOverlay').classList.add('active');
-    }
-
-    // 1v1 私教课详情
-    window.openCourseDetail = function () {
-        openInfoModal('1v1 混音私教课 · 课程详情', `
-            <p class="detail-lead">从零基础到能独立完成一首歌的混音交付。全程一对一，按你的水平和目标定制内容，不走通用模板。</p>
-            <h3>适合谁</h3>
-            <ul>
-              <li>刚接触混音、不知道从哪一步开始的制作人</li>
-              <li>会操作 DAW 但作品总差一口气、找不到问题的进阶者</li>
-              <li>想接单变现、需要一套可复用工作流的独立音乐人</li>
-            </ul>
-            <h3>课程大纲（6 阶段）</h3>
-            <ul>
-              <li><strong>阶段一 · 听觉与判断</strong>：建立听感参照，学会判断电平、频段、动态的问题在哪</li>
-              <li><strong>阶段二 · 信号链与工程搭建</strong>：分轨整理、总线结构、监听与参考设定</li>
-              <li><strong>阶段三 · 平衡</strong>：电平平衡、EQ 取舍、频段冲突处理</li>
-              <li><strong>阶段四 · 动态与空间</strong>：压缩器与混响的实际用法，空间层次搭建</li>
-              <li><strong>阶段五 · 风格化处理</strong>：按流行 / 电子 / 民谣 / Hip-Hop 分别拆解处理思路</li>
-              <li><strong>阶段六 · 交付</strong>：母带响度、多平台适配、导出与交付规范</li>
-            </ul>
-            <h3>上课形式</h3>
-            <ul>
-              <li>线上 1v1 直播授课，按你的时间预约</li>
-              <li>以你的真实工程为主线，逐轨拆解问题</li>
-              <li>每节课后布置针对性作业，下次课逐条点评</li>
-              <li>课后答疑不限次数，学习社群长期保留</li>
-            </ul>
-            <h3>交付成果</h3>
-            <p>课程结束时，你会独立完成至少一首完整混音作品，并沉淀一套属于自己的工作流笔记与工程模板。</p>
-            <h3>报名方式</h3>
-            <p>课时安排与费用根据你的基础和目标定制，扫码添加微信沟通，可先申请一次免费作品点评。</p>
-            <button class="btn btn-primary btn-block" style="margin-top:16px" onclick="document.getElementById('modalOverlay').classList.remove('active');openContactModal()">加微信咨询报名</button>
-        `);
-    };
 })();
