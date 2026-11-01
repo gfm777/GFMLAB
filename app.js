@@ -575,5 +575,69 @@
         renderTimeline();
         renderDawCards();
         renderEngineerCards();
+        initBpmTap();
+        initKeyDisplay();
+        initContactModal();
     });
+
+    // BPM 测速器
+    function initBpmTap() {
+        const btn = document.getElementById('bpmTapBtn');
+        const display = document.getElementById('bpmDisplay');
+        const info = document.getElementById('bpmInfo');
+        if (!btn) return;
+        let taps = [];
+        let resetTimer;
+        btn.addEventListener('click', () => {
+            const now = Date.now();
+            taps.push(now);
+            if (taps.length > 8) taps.shift();
+            clearTimeout(resetTimer);
+            resetTimer = setTimeout(() => { taps = []; info.textContent = '点击 4 次以上开始计算'; }, 3000);
+            if (taps.length < 2) { info.textContent = `已点击 ${taps.length} 次，继续...`; return; }
+            const intervals = [];
+            for (let i = 1; i < taps.length; i++) intervals.push(taps[i] - taps[i-1]);
+            const avg = intervals.reduce((a,b) => a+b, 0) / intervals.length;
+            const bpm = Math.round(60000 / avg);
+            display.innerHTML = `${bpm} <span>BPM</span>`;
+            info.textContent = `采样 ${taps.length} 次 · 3秒无操作重置`;
+        });
+    }
+
+    // 调式显示
+    function initKeyDisplay() {
+        const list = document.getElementById('keyList');
+        if (!list) return;
+        const keys = ['C', 'G', 'D', 'A', 'E', 'F', 'Bb', 'Eb'];
+        list.innerHTML = keys.map(k => `<span>${k} 大调</span>`).join('');
+    }
+
+    // 效果器参数计算器
+    function calcFxParams() {
+        const input = document.getElementById('bpmInput');
+        const result = document.getElementById('calcResult');
+        const bpm = parseFloat(input.value);
+        if (!bpm || bpm < 40 || bpm > 240) { result.innerHTML = '<span style="color:#ff6b6b">请输入 40-240 之间的 BPM</span>'; return; }
+        const beat = 60000 / bpm;
+        const rows = [
+            ['1/4 音符 (拍)', beat],
+            ['1/8 音符', beat/2],
+            ['1/16 音符', beat/4],
+            ['1/4 附点', beat*1.5],
+            ['1/8 三连音', beat/3],
+            ['1 小节 (4拍)', beat*4]
+        ];
+        result.innerHTML = rows.map(([label, ms]) =>
+            `<div class="row"><span>${label}</span><span class="val">${ms.toFixed(0)} ms</span></div>`
+        ).join('');
+    }
+
+    // 联系弹窗
+    function initContactModal() {
+        window.openContactModal = () => document.getElementById('contactModal').classList.add('active');
+        window.closeContactModal = (e) => {
+            if (e && e.target.id !== 'contactModal' && e.type !== 'click') return;
+            document.getElementById('contactModal').classList.remove('active');
+        };
+    }
 })();

@@ -28,12 +28,14 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#hero" class="nav-link active">首页</a></li>
-                <li><a href="#terminology" class="nav-link">术语库</a></li>
-                <li><a href="#mechanics" class="nav-link">运作逻辑</a></li>
-                <li><a href="#history" class="nav-link">历史背景</a></li>
-                <li><a href="#daw" class="nav-link">DAW</a></li>
-                <li><a href="#engineers" class="nav-link">混音师</a></li>
+                <li><a href="#knowledge" class="nav-link">知识库</a></li>
+                <li><a href="#assistant" class="nav-link">制作人助手</a></li>
+                <li><a href="#resources" class="nav-link">资源中心</a></li>
+                <li><a href="#weekly" class="nav-link">行业周报</a></li>
+                <li><a href="#services" class="nav-link">服务与课程</a></li>
+                <li><a href="#about" class="nav-link">关于我们</a></li>
             </ul>
+            <button class="nav-cta" onclick="openContactModal()">免费咨询</button>
             <button class="nav-toggle" id="navToggle">
                 <span></span><span></span><span></span>
             </button>
@@ -52,34 +54,43 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-                <span class="badge-text">AUDIO ENGINEERING KNOWLEDGE BASE v2.0</span>
+                <span class="badge-text">GFMLAB · 音乐制作人社区</span>
             </div>
             <h1 class="hero-title">
-                <span class="title-line">探索声音的</span>
-                <span class="title-gradient">无限维度</span>
+                <span class="title-line">让每个音乐制作人</span>
+                <span class="title-gradient">都有趁手的工具</span>
             </h1>
             <p class="hero-subtitle">
-                混音（Mixing）是音乐制作中最关键的艺术与科学——<br>
-                将无数独立的音轨编织成一个完整、平衡、富有情感的听觉体验。
+                BPM 测速 · 调式检测 · 效果器参数计算 · 行业周报 · 混音教学<br>
+                一站式音乐制作人成长社区，免费工具 + 专业内容 + 1v1 辅导
             </p>
-            <div class="search-container">
-                <div class="search-box glass">
-                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"/>
-                        <path d="m21 21-4.35-4.35"/>
-                    </svg>
-                    <input type="text" id="searchInput" placeholder="搜索混音术语、技术、历史..." autocomplete="off">
-                    <button class="search-btn" id="searchBtn">搜索</button>
-                </div>
-                <div class="search-suggestions" id="searchSuggestions"></div>
+            <div class="hero-cta">
+                <button class="btn btn-primary" onclick="openContactModal()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    免费作品点评
+                </button>
+                <a href="#portfolio" class="btn btn-ghost">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                    看作品案例
+                </a>
             </div>
-            <div class="hero-tags">
-                <span class="tag">热门词条:</span>
-                <button class="tag-btn" data-search="均衡器">EQ 均衡器</button>
-                <button class="tag-btn" data-search="压缩器">Compressor 压缩</button>
-                <button class="tag-btn" data-search="混响">Reverb 混响</button>
-                <button class="tag-btn" data-search="声像">Panning 声像</button>
-                <button class="tag-btn" data-search="母带">Mastering 母带</button>
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    BPM 测速
+                </div>
+                <div class="hero-feature">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                    调式检测
+                </div>
+                <div class="hero-feature">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="10" y1="10" x2="10" y2="14"/><line x1="14" y1="10" x2="14" y2="14"/><line x1="18" y1="10" x2="18" y2="14"/></svg>
+                    效果器计算
+                </div>
+                <div class="hero-feature">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    行业周报
+                </div>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -90,7 +101,7 @@
         </div>
     </section>
 
-    <section id="terminology" class="section">
+    <section id="knowledge" class="section">
         <div class="container">
             <div class="section-header">
                 <div class="section-meta">
@@ -188,6 +199,260 @@
         </div>
     </section>
 
+    <!-- 制作人助手 -->
+    <section id="assistant" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-meta">
+                    <span class="section-num">02</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title">制作人<span class="title-gradient">助手</span></h2>
+                <p class="section-desc">免费在线工具，帮你快速搞定 BPM、调式、效果器参数推算</p>
+            </div>
+            <div class="assistant-grid">
+                <!-- BPM 测速 -->
+                <div class="tool-card glass">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3 class="tool-title">BPM 测速器</h3>
+                    <p class="tool-desc">跟着节奏点击，自动计算歌曲速度</p>
+                    <div class="bpm-display" id="bpmDisplay">-- <span>BPM</span></div>
+                    <button class="btn btn-primary btn-block" id="bpmTapBtn">点我打拍</button>
+                    <div class="bpm-info" id="bpmInfo">点击 4 次以上开始计算</div>
+                </div>
+                <!-- 调式检测 -->
+                <div class="tool-card glass">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                    </div>
+                    <h3 class="tool-title">调式检测</h3>
+                    <p class="tool-desc">输入歌曲名或 BPM，推荐常用调式</p>
+                    <div class="key-display" id="keyDisplay">C 大调 / A 小调</div>
+                    <div class="key-list" id="keyList"></div>
+                </div>
+                <!-- 效果器计算器 -->
+                <div class="tool-card glass">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="10" y1="10" x2="10" y2="14"/><line x1="14" y1="10" x2="14" y2="14"/><line x1="18" y1="10" x2="18" y2="14"/></svg>
+                    </div>
+                    <h3 class="tool-title">效果器参数计算器</h3>
+                    <p class="tool-desc">根据 BPM 推算 Delay / Reverb 时间参数</p>
+                    <div class="calc-input">
+                        <input type="number" id="bpmInput" placeholder="输入 BPM" min="40" max="240">
+                        <button class="btn btn-primary" onclick="calcFxParams()">计算</button>
+                    </div>
+                    <div class="calc-result" id="calcResult"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行业周报 -->
+    <section id="weekly" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-meta">
+                    <span class="section-num">03</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title">行业<span class="title-gradient">周报</span></h2>
+                <p class="section-desc">每周精选音乐科技动态、技术趋势与作品推荐</p>
+            </div>
+            <div class="weekly-grid" id="weeklyGrid">
+                <div class="weekly-card glass">
+                    <div class="weekly-issue">第 01 期</div>
+                    <h3 class="weekly-title">2026 年 AI 音乐制作工具盘点</h3>
+                    <p class="weekly-summary">本周 AI 音乐领域迎来多款新工具，从 AI 母带到智能编曲，效率提升显著...</p>
+                    <div class="weekly-meta">2026-11-01 · 张晓奇</div>
+                    <a href="#" class="weekly-link">阅读全文 →</a>
+                </div>
+                <div class="weekly-card glass">
+                    <div class="weekly-issue">第 02 期</div>
+                    <h3 class="weekly-title">Logic Pro 新功能深度解析</h3>
+                    <p class="weekly-summary">Logic Pro 重大更新，新增 AI 混音助手与空间音频工具，制作人 workflow 再升级...</p>
+                    <div class="weekly-meta">2026-11-01 · 张晓奇</div>
+                    <a href="#" class="weekly-link">阅读全文 →</a>
+                </div>
+                <div class="weekly-card glass">
+                    <div class="weekly-issue">第 03 期</div>
+                    <h3 class="weekly-title">流媒体平台响度标准更新</h3>
+                    <p class="weekly-summary">Spotify、Apple Music 调整 LUFS 标准，母带处理策略需要相应调整...</p>
+                    <div class="weekly-meta">2026-11-01 · 张晓奇</div>
+                    <a href="#" class="weekly-link">阅读全文 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品展示墙 -->
+    <section id="portfolio" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-meta">
+                    <span class="section-num">04</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title">作品<span class="title-gradient">展示</span></h2>
+                <p class="section-desc">GFMLAB 工作室制作案例 — 用作品说话</p>
+            </div>
+            <div class="portfolio-grid" id="portfolioGrid">
+                <div class="portfolio-card glass">
+                    <div class="portfolio-cover" style="background:linear-gradient(135deg,#667eea,#764ba2)"></div>
+                    <div class="portfolio-info">
+                        <h3>电子流行单曲《Neon》</h3>
+                        <div class="portfolio-tags"><span>编曲</span><span>混音</span><span>母带</span></div>
+                        <p>全流程制作，电子流行风格，已上线网易云音乐</p>
+                    </div>
+                </div>
+                <div class="portfolio-card glass">
+                    <div class="portfolio-cover" style="background:linear-gradient(135deg,#f093fb,#f5576c)"></div>
+                    <div class="portfolio-info">
+                        <h3>民谣专辑《远方》</h3>
+                        <div class="portfolio-tags"><span>录音</span><span>混音</span></div>
+                        <p>10 首原创民谣专辑，收录于各大音乐平台</p>
+                    </div>
+                </div>
+                <div class="portfolio-card glass">
+                    <div class="portfolio-cover" style="background:linear-gradient(135deg,#4facfe,#00f2fe)"></div>
+                    <div class="portfolio-info">
+                        <h3>Hip-Hop 单曲《City》</h3>
+                        <div class="portfolio-tags"><span>Beat</span><span>混音</span></div>
+                        <p>Boom Bap 风格 Beat 制作 + 后期混音</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <button class="btn btn-primary" onclick="openContactModal()">想要类似作品？聊聊 →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 资源中心 -->
+    <section id="resources" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-meta">
+                    <span class="section-num">05</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title">资源<span class="title-gradient">中心</span></h2>
+                <p class="section-desc">自研小工具 + 精选开源资源，免费下载使用</p>
+            </div>
+            <div class="resources-grid" id="resourcesGrid">
+                <div class="resource-card glass">
+                    <div class="resource-badge">自研 · 免费</div>
+                    <h3 class="resource-title">Logic 格式转换助手</h3>
+                    <p class="resource-desc">批量转换 Logic Pro 工程文件格式，支持多种音频格式互转，Mac 原生应用。</p>
+                    <div class="resource-tags"><span>macOS</span><span>Logic Pro</span><span>批量处理</span></div>
+                    <a href="#" class="resource-download" onclick="alert('百度网盘链接即将上线，敬请期待')">下载安装包 ↓</a>
+                </div>
+                <div class="resource-card glass">
+                    <div class="resource-badge">自研 · 免费</div>
+                    <h3 class="resource-title">Logic 批量改名助手</h3>
+                    <p class="resource-desc">一键批量重命名 Logic 工程内音轨，支持正则表达式与自定义规则，告别手动改名。</p>
+                    <div class="resource-tags"><span>macOS</span><span>Logic Pro</span><span>效率工具</span></div>
+                    <a href="#" class="resource-download" onclick="alert('百度网盘链接即将上线，敬请期待')">下载安装包 ↓</a>
+                </div>
+                <div class="resource-card glass">
+                    <div class="resource-badge">开源</div>
+                    <h3 class="resource-title">开源插件精选合集</h3>
+                    <p class="resource-desc">精选 20+ 款高质量开源 VST/AU 插件，涵盖 EQ、压缩、混响等常用效果器。</p>
+                    <div class="resource-tags"><span>VST</span><span>AU</span><span>开源</span></div>
+                    <a href="#" class="resource-download">查看推荐 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务与课程 -->
+    <section id="services" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-meta">
+                    <span class="section-num">06</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title">服务与<span class="title-gradient">课程</span></h2>
+                <p class="section-desc">专业音乐制作服务 + 系统化教学课程，助你快速成长</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass">
+                    <div class="service-badge">音乐制作业务</div>
+                    <h3 class="service-title">编曲 / 混音 / 母带</h3>
+                    <ul class="service-list">
+                        <li>✓ 原创编曲（流行 / 电子 / 民谣 / Hip-Hop）</li>
+                        <li>✓ 专业混音（分轨混音，符合流媒体标准）</li>
+                        <li>✓ 母带处理（LUFS 达标，多平台优化）</li>
+                        <li>✓ 录音指导与后期修复</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block" onclick="openContactModal()">获取报价</button>
+                </div>
+                <div class="service-card glass featured">
+                    <div class="service-badge">热门课程</div>
+                    <h3 class="service-title">1v1 混音私教课</h3>
+                    <ul class="service-list">
+                        <li>✓ 零基础到进阶，全程 1v1 辅导</li>
+                        <li>✓ 真实工程实战，逐轨拆解</li>
+                        <li>✓ 课后作业点评 + 答疑</li>
+                        <li>✓ 终身社群，持续学习</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block" onclick="openContactModal()">预约试听</button>
+                </div>
+                <div class="service-card glass">
+                    <div class="service-badge">咨询服务</div>
+                    <h3 class="service-title">作品点评 / 职业规划</h3>
+                    <ul class="service-list">
+                        <li>✓ 作品专业点评（混音问题诊断）</li>
+                        <li>✓ 音乐制作职业路径规划</li>
+                        <li>✓ DAW 与设备选购建议</li>
+                        <li>✓ 接单与变现指导</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block" onclick="openContactModal()">免费咨询</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-meta">
+                    <span class="section-num">07</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title">关于<span class="title-gradient">我们</span></h2>
+            </div>
+            <div class="about-content glass">
+                <div class="about-text">
+                    <h3>GFMLAB 音乐制作工作室</h3>
+                    <p>我们是一支专注于音乐制作的团队，致力于为音乐制作人提供专业的工具、内容和教学服务。从混音基础知识到实战工程，从免费小工具到 1v1 私教，我们希望成为每个音乐制作人成长路上的伙伴。</p>
+                    <div class="about-stats">
+                        <div class="stat"><div class="stat-num">5+</div><div class="stat-label">年制作经验</div></div>
+                        <div class="stat"><div class="stat-num">100+</div><div class="stat-label">制作案例</div></div>
+                        <div class="stat"><div class="stat-num">50+</div><div class="stat-label">学员</div></div>
+                        <div class="stat"><div class="stat-num">2</div><div class="stat-label">自研工具</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系弹窗 -->
+    <div class="modal-overlay" id="contactModal" onclick="closeContactModal(event)">
+        <div class="modal glass" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeContactModal()">×</button>
+            <h3 class="modal-title">扫码添加微信</h3>
+            <p class="modal-subtitle">免费获取 1v1 作品点评</p>
+            <div class="modal-qr">
+                <img src="images/contact/wechat-qr.jpg" alt="微信二维码">
+            </div>
+            <p class="modal-tip">微信搜索：张晓奇奇奇</p>
+        </div>
+    </div>
+
     <footer class="footer glass-nav">
         <div class="container footer-content">
             <div class="footer-brand">
@@ -204,27 +469,56 @@
                     </svg>
                     <span class="logo-text">GFM<span class="logo-accent">LAB</span></span>
                 </div>
-                <p class="footer-desc">混音基础知识库 · 让声音艺术触手可及</p>
+                <p class="footer-desc">音乐制作人社区 · 工具 + 内容 + 教学</p>
             </div>
             <div class="footer-links">
                 <div class="footer-col">
-                    <h4>知识板块</h4>
-                    <a href="#terminology">术语库</a>
-                    <a href="#mechanics">运作逻辑</a>
-                    <a href="#history">历史背景</a>
-                    <a href="#daw">DAW</a>
-                    <a href="#engineers">混音师</a>
+                    <h4>快速导航</h4>
+                    <a href="#knowledge">知识库</a>
+                    <a href="#assistant">制作人助手</a>
+                    <a href="#resources">资源中心</a>
+                    <a href="#weekly">行业周报</a>
+                    <a href="#services">服务与课程</a>
                 </div>
                 <div class="footer-col">
-                    <h4>技术栈</h4>
-                    <span>纯前端实现</span>
-                    <span>CSS3 动效</span>
-                    <span>Canvas 粒子</span>
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="B站">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906L17.813 4.653zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773H5.333zM8 11.107c.373 0 .684.124.933.373.25.249.373.569.373.96v1.12c0 .391-.124.711-.373.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.373-.569-.373-.96v-1.12c0-.391.124-.711.373-.96.249-.249.56-.373.933-.373zm8 0c.373 0 .684.124.933.373.25.249.373.569.373.96v1.12c0 .391-.124.711-.373.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.373-.569-.373-.96v-1.12c0-.391.124-.711.373-.96.249-.249.56-.373.933-.373z"/></svg>
+                            <span>B站</span>
+                        </a>
+                        <a href="#" class="social-link" title="抖音">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                            <span>抖音</span>
+                        </a>
+                        <a href="#" class="social-link" title="小红书">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm6.2 5.6v9.6h1.9v-4.6c.6-1 1.6-1.6 2.8-1.6 1.9 0 3 1.2 3 3.2v3h-1.9v-2.7c0-.9-.5-1.5-1.4-1.5s-1.5.6-1.5 1.5v2.7h-1.9V8.6H9.2z"/></svg>
+                            <span>小红书</span>
+                        </a>
+                        <a href="#" class="social-link" title="快手">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.5 2c-1 0-1.8.8-1.8 1.8v7.5c0 1 .8 1.8 1.8 1.8s1.8-.8 1.8-1.8V3.8c0-1-.8-1.8-1.8-1.8zm-5 8c-1 0-1.8.8-1.8 1.8v5.5c0 1 .8 1.8 1.8 1.8s1.8-.8 1.8-1.8v-5.5c0-1-.8-1.8-1.8-1.8zm10 0c-1 0-1.8.8-1.8 1.8v5.5c0 1 .8 1.8 1.8 1.8s1.8-.8 1.8-1.8v-5.5c0-1-.8-1.8-1.8-1.8z"/></svg>
+                            <span>快手</span>
+                        </a>
+                        <a href="#" class="social-link" title="视频号">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+                            <span>视频号</span>
+                        </a>
+                        <a href="#" class="social-link" title="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            <span>YouTube</span>
+                        </a>
+                    </div>
+                    <p class="footer-id">全网 ID：张晓奇奇奇</p>
+                </div>
+                <div class="footer-col">
+                    <h4>联系合作</h4>
+                    <button class="btn btn-ghost btn-sm" onclick="openContactModal()">加微信咨询</button>
+                    <span class="footer-note">音乐制作 · 教学 · 合作</span>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <span>© 2026 GFMLAB Knowledge Base · Crafted with 🎵 & ⚡</span>
+            <span>© 2026 GFMLAB · 音乐制作人社区 · Crafted with 🎵 & ⚡</span>
         </div>
     </footer>
 
